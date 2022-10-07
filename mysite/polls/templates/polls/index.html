@@ -1,0 +1,26 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+    <h1>Đây là {{name}}</h1>
+    {% for i in taisan %}
+        <ul>
+            <li>{{i}}</li>
+        </ul>
+    {% endfor %}
+
+{% endblock %}
+
+{% block content1 %}
+{% if list_questionn %}
+    <h1>Đây là list câu hỏi</h1>
+    {% for i in list_questionn %}
+        <ul>
+            <li>{{i.question_text}}</li>
+        </ul>
+    {% endfor %}
+{% else %}
+        <h1>không có dữ liệu</h1>
+{% endif %}
+
+
+{% endblock %} 
